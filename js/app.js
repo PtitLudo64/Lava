@@ -23,7 +23,7 @@ ctx.fillStyle = '#f00';
 // ctx.fillStyle = gradient;
 
 const effect = new MetaballsEffect(canvas.width, canvas.height);
-effect.init(20);
+effect.init(25);
 
 
 function animate() {

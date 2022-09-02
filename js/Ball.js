@@ -2,8 +2,8 @@ class Ball {
     constructor (effect) {
         this.effect = effect;
         this.x = this.effect.width * 0.5;
-        this.y = this.effect.height * 0.5;
-        this.radius = Math.random() * 70 + 30;
+        this.y = this.effect.height -150;
+        this.radius = Math.random() * 50 + 20;
         this.speedX = Math.random() - 0.5;
         this.speedY = Math.random() - 0.5;
         this.angle = 0;
@@ -14,8 +14,8 @@ class Ball {
         if (this.x < this.radius || this.x > this.effect.width - this.radius) this.speedX *=-1;
         if (this.y < this.radius || this.y > this.effect.height - this.radius) this.speedY *=-1;
         this.angle += this.va;
-        this.x += this.speedX * Math.cos(this.angle) * this.range;
-        this.y += this.speedY * Math.cos(this.angle) * this.range;
+        this.x += this.speedX * Math.tan(this.angle) * this.range * 0.005;
+        this.y += this.speedY * Math.sin(this.angle) * this.range * 0.8;
 
     }
     draw(context) {
